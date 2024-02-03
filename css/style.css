@@ -6,6 +6,7 @@
     }
     
     header{
+        background-image:url("images/IMG_5346.jpeg");
     height: 45px;
     }
     header nav ul{
@@ -69,6 +70,13 @@
         
         }
         
+        section#navigation{
+            height:60px;
+            display: flex;
+            list-style: none;
+            display: inline;
+        }
+        
         section{
         height: 60vh;
         border: 1px solid grey;
@@ -115,8 +123,16 @@
     /* css to background color and style */
 
     #intro {
+        background-image: url(/images/IMG_5346.jpeg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position-x:center;
+        background-blend-mode:lighten;
+        opacity:0.8;
+
+        /*
         background-image: url(/IMG_5346.jpeg);
-        background-repeat: round;
+        background-repeat: no-repeat;*/
         }
         #about{
         background-color: rgb(187, 236, 227);

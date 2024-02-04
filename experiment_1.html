@@ -62,26 +62,132 @@ body{
 .navigation .nav-btn:hover {
   background: white;
 }
+.slider-carousel {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+
+}
+.slider-carousel img {
+  width: 100%;
+  transition: all 0.3s ease;
+  border:8px solid white;
+}
+
+.images {
+  position: absolute;
+  display: none;
+}
+
+.main {
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  width: 103%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.3);
+  height: 35px;
+}
 
 </style>
 </head>
 <body>
 
 <div id="parent-container">
+    <div class="navigation-buttons">
+      <div class="previous nav-btn"><</div>
+      <div class="next nav-btn">></div>
+    </div>
 
-<div class="navigation-buttons">
-  <div class="previous nav-btn"><</div>
-  <div class="next nav-btn">></div>
+    <div class="slider-carousel">
+      <div class="images main">
+        <p><a href="/Samples_Assets/Sample-Redact-UI-1-7.pdf/" target="_blank">
+        <img src="images/SampleUI_HalfPage.png" alt="Sample UI document" /></a>
+        <div class="image-text">UI Document</div></p>
+      </div>
+      <div class="images">
+        <p><a href="/video_SequenceCheck.html" target="_blank"> 
+        <img src="images/SampleVideoImage_Software.png" alt="Software Video using emulator" /></a>
+        <div class="image-text">Video of software using emulator and triggering from MySQL</div></p>
+      </div>
+      <div class="images">
+        <p><a href="Samples_Assets/SampleConfluence_FullPage.png" target="_blank">
+        <img src="images/SampleConfluence_HalfPage.png" alt="Sample of Confluence Quick Start Guide" /></a>
+        <div class="image-text">Sample of Confluence Quick Start Guide</div></p>
+      </div> 
+      <div class="images">
+        <p><a href="/video_InstructionalDesign.html" target="_blank">
+        <img src="images/SampleVideoImage_Training.png" alt="Sample of Instructional Design Video" /></a>
+        <div class="image-text">Sample of Instructional Design Video</div></p>
+      </div>     
+      <div class="images">
+        <p><a href="/Samples_Assets/SampleModeling1b.png" target="_blank">
+        <img src="images/SampleModelingHalfPage.png" alt="Sample of document using modeling softwre" /></a>
+        <div class="image-text">Sample of Document using Modeling software (solidworks)</div></p>
+      </div>  
+    </div>
+
 </div>
 
-</div>
+<!--<img src="images/IMG_5346.jpeg" alt="NYC Classic Holiday Nostalgia Rides">-->
+<script>
 
+  const previous = document.querySelector('.previous');
+  const next = document.querySelector('.next');
+  const images = document.querySelector('.slider-carousel').children;
+  const totalImages = images.length;
+  let currentIndex = 0;
+
+
+// Event Listeners to previous and next buttons
+  previous.addEventListener('click', () => {
+    previousImage()
+  })
+
+  next.addEventListener('click', () => {
+    nextImage();
+  })
+  
+  setInterval (()=>{
+    nextImage();
+  },3000);
+  
+  // Function to go to next Image
+  function nextImage(){
+
+    images[currentIndex].classList.remove('main');
+    if(currentIndex == totalImages-1){
+        currentIndex = 0;
+      }
+      else{
+        currentIndex++;
+      }
+
+    images[currentIndex].classList.add('main');
+    
+  }
+  
+  // Function to go to previous Image
+  function previousImage(){
+
+    images[currentIndex].classList.remove('main');
+    if(currentIndex == 0){
+        currentIndex = totalImages-1;
+      }
+      else{
+        currentIndex--;
+      }
+  
+    images[currentIndex].classList.add('main');
+
+  }
+  
+</script>
 </body>
 </html>
-
-
-</div>
-
-</body>
-</html>
-

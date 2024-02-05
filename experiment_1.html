@@ -1,9 +1,12 @@
+
+<!-- This div will contain all images and buttons we will be using for Slider
+-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Slider in CSS</title>
-<style>
-</style>
+<title>Slider of Samples</title>
+<link href="css/slider.css" rel="stylesheet">
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,105 +27,23 @@
     <!--End Google Tag-->
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGP5PK6R"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-<div id="parent-container">
-
-<!-- This div will contain all images and buttons we will be using for Slider
--->
-<!DOCTYPE html>
-<html>
-<head>
-<title>Slider in CSS</title>
-<style>
-
-body{
-    background-color: rgb(58, 58, 58);
-    margin-top: 100px;
-}
-.carousel-container {
-  width: 600px;
-  height: 400px;
-  position: relative;
-  margin: 0 auto;
-
-}
-
-.navigation-buttons .previous {
-  position: absolute;
-  z-index: 10;
-  font-size: 25px;
-  top: 40%;
-  left: 10px;
-  font-weight: 700;
-}
-
-.navigation-buttons .next {
-  right: 10px;
-  position: absolute;
-  font-size: 25px;
-  z-index: 10;
-  top: 40%;
-}
-
-.navigation-buttons .nav-btn {
-  background: rgba(255, 255, 255, 0.55);
-  cursor: pointer;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.navigation .nav-btn:hover {
-  background: white;
-}
-.slider-carousel {
-  margin-top: 20px;
-  transition: all 0.3s ease;
-
-}
-.slider-carousel img {
-  width: 100%;
-  transition: all 0.3s ease;
-  border:8px solid white;
-}
-
-.images {
-  position: absolute;
-  display: none;
-}
-
-.main {
-  display: block;
-}
-
-.image-text {
-  position: absolute;
-  bottom: 0;
-  width: 103%;
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  background: rgba(0, 0, 0, 0.3);
-  height: 35px;
-}
-
-</style>
-</head>
-<body>
-
-<div id="parent-container">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGP5PK6R"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+<h1>AwSome Samples</h1>
+<main>
+  <section id="sampleIntro">
+    <div class="Container">
+      <h2>Samples Slider</h2>
+      <p>
+        Here you can select a few samples for your viewing and review.
+      </p>
+    </div>
+  </section>
+<div id="slider-container">
     <div class="navigation-buttons">
-      <div class="previous nav-btn"><</div>
+      <div class="previous nav-btn"></div>
       <div class="next nav-btn">></div>
     </div>
 
@@ -151,64 +72,12 @@ body{
         <p><a href="/Samples_Assets/SampleModeling1b.png" target="_blank">
         <img src="images/SampleModelingHalfPage.png" alt="Sample of document using modeling softwre" /></a>
         <div class="image-text">Sample of Document using Modeling software (solidworks)</div></p>
-      </div>  
+      </div>   
     </div>
+  </div>
+</main>
 
-</div>
+<script type="text/javascript" src="js/slider.js"></script>
 
-<!--<img src="images/IMG_5346.jpeg" alt="NYC Classic Holiday Nostalgia Rides">-->
-<script>
-
-  const previous = document.querySelector('.previous');
-  const next = document.querySelector('.next');
-  const images = document.querySelector('.slider-carousel').children;
-  const totalImages = images.length;
-  let currentIndex = 0;
-
-
-// Event Listeners to previous and next buttons
-  previous.addEventListener('click', () => {
-    previousImage()
-  })
-
-  next.addEventListener('click', () => {
-    nextImage();
-  })
-  
-  setInterval (()=>{
-    nextImage();
-  },3000);
-  
-  // Function to go to next Image
-  function nextImage(){
-
-    images[currentIndex].classList.remove('main');
-    if(currentIndex == totalImages-1){
-        currentIndex = 0;
-      }
-      else{
-        currentIndex++;
-      }
-
-    images[currentIndex].classList.add('main');
-    
-  }
-  
-  // Function to go to previous Image
-  function previousImage(){
-
-    images[currentIndex].classList.remove('main');
-    if(currentIndex == 0){
-        currentIndex = totalImages-1;
-      }
-      else{
-        currentIndex--;
-      }
-  
-    images[currentIndex].classList.add('main');
-
-  }
-  
-</script>
 </body>
 </html>

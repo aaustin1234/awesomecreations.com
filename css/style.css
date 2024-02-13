@@ -47,7 +47,7 @@
     line-height: 40px;
     display: flex;
     justify-content: center;
-}
+    }
 
     /* css to individual elements*/
 
@@ -153,6 +153,8 @@
         justify-content: center;
         font-size: 1rem;
         }
+
+
         
     /* css to background color and style */
 
@@ -164,13 +166,14 @@
         background-blend-mode:lighten;
         opacity:0.8;
 
-        /*
-        background-image: url(/IMG_5346.jpeg);
-        background-repeat: no-repeat;*/
         }
         #about{
         background-color: rgb(187, 236, 227);
+        background-size:auto;
+        height:fit-content;
         }
         #contact{
         background-color: rgb(188, 240, 236);
+        background-size: auto;
+        height:fit-content
         }

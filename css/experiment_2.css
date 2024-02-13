@@ -21,6 +21,11 @@ body{
     font-family: var(--primary-font);
 }
 
+.homelink h1{
+  a{color:black;
+  text-decoration: none;}
+}
+
 main{
     height: 55%;
     display: flex;

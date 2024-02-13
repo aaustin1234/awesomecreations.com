@@ -25,6 +25,7 @@ main{
     height: 55%;
     display: flex;
     justify-content: center;
+    border: 1px solid black;
 
 }
 
@@ -43,18 +44,25 @@ main{
 .card-pos-a{
     grid-area: a;
     background-color: gray;
+    border: 1px solid black;
 }
 .card-pos-b{
     grid-area: b;
     background-color: goldenrod;
+    border: 1px solid black;
+
 }
 .card-pos-c{
     grid-area: c;
     background-color: rosybrown;
+    border: 1px solid black;
+
 }
 .card-pos-d{
     grid-area: d;
     background-color: darkcyan;
+    border: 1px solid black;
+
 }
 .card-pos-a, .card-pos-b,.card-pos-c,.card-pos-d{
     display:flex;

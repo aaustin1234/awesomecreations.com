@@ -139,7 +139,7 @@
             font-size:1.5rem;
             font-weight:bold;
             margin-left:5%;
-            a{color:black;}
+            a{color:rgb(14, 14, 30);}
         }
         .container dt, dd{
             margin-top: 1%;

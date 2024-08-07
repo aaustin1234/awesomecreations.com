@@ -11,10 +11,10 @@
         <div class="column" id="backlog">
             <h2>Backlog</h2>
             <div class="task-list" id="backlog-list">
-                <!-- backlog will go here -->
+                <!-- Backlog tasks will go here -->
             </div>
             <input type="text" id="backlog-input" placeholder="Add to the backlog">
-            <button onclick="addBacklog('backlog')">Add Backlog</button>
+            <button onclick="addTask('backlog')">Add Backlog</button>
         </div>
         <div class="column" id="todo">
             <h2>To Do</h2>
@@ -29,6 +29,8 @@
             <div class="task-list" id="waiting-list">
                 <!-- Tasks will go here -->
             </div>
+            <input type="text" id="waiting-input" placeholder="Add to waiting">
+            <button onclick="addTask('waiting')">Add Waiting</button>
         </div>
         <div class="column" id="in-progress">
             <h2>In Progress</h2>

@@ -9,15 +9,17 @@ function addTask(columnId) {
     task.className = 'task';
     task.innerText = taskText;
 
-    // Make tasks draggable
-    task.setAttribute('draggable', 'true');
-    task.ondragstart = handleDragStart;
-    task.ondragover = handleDragOver;
-    task.ondrop = handleDrop;
-
     taskList.appendChild(task);
     input.value = '';
 }
+
+// Attach event listeners if you prefer this method over inline onclick
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function() {
+        const columnId = this.previousElementSibling.id.split('-')[0]; // Assumes button is always after input
+        addTask(columnId);
+    });
+});
 
 function handleDragStart(event) {
     event.dataTransfer.setData('text/plain', event.target.innerText);
